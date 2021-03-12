@@ -10,27 +10,29 @@
 <body>
     <div class="main-container">
         <div class="logo">
-            <img src="./assets/images/logo-chanel-WFJ.svg"/>
+            <img src="./assets/images/logo-chanel-WFJ.svg" alt="logo-chanel"/>
         </div>
         <div class="blurred-bg-login">
-            
+            <div class="bg-filter"></div>
             <div class="introduce-code">
                 <div class="introduce-text">
-                    <p>Entrez svp le code à 4 chiffres qui vous a été communiqué par votre conseiller chanel.</p>
+                    <p>Entrez svp le code à 4 chiffres <br>
+                        qui vous a été communiqué par votre conseiller chanel.</p>
                 </div>
                 <div class="form-ciphers">
-					<div class="passcode-wrapper">
-						<input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)">
-						<input id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)">
-						<input id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)">
-						<input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)">
+                    <div class="passcode-wrapper">
+                        <input id="codeBox1" type="text" maxlength="1" >
+                        <input id="codeBox2" type="text" maxlength="1" >
+                        <input id="codeBox3" type="text" maxlength="1" >
+                        <input id="codeBox4" type="text" maxlength="1" >
                     </div>
                     <div class="forgotten-code">
                         <p>Code oublié ?</p>
                     </div>
-            </div>
+                </div>
 
-        </div>
+            </div>
+    
     </div>
     
 </body>

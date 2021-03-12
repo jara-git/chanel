@@ -1,8 +1,7 @@
 /* -----FONTS-------*/
 @font-face {
-    font-family: 'ABChanel Corpo';
+    font-family: 'ABChanel Corpo Light';
     src: url("./assets/fonts/ABChanelCorpo-Light.ttf");
-    font-family: 'ABChanel Corpo';
 }
 
 @font-face {
@@ -17,7 +16,7 @@
     font-weight: normal;
 }
 
-$heading-font-family: 'ABChanel Corpo', sans-serif;
+$heading-font-family: 'ABChanel Corpo Light', sans-serif;
 $body-font-family: 'Helvetica Neue LTS td', sans-serif;
 $body-font-semi: 'ABChanelCorpo-SemiBold', sans-serif;
 
@@ -63,12 +62,12 @@ body {
             position: absolute;
         }
         .intro-text {
-            margin-top: 72px;
+            margin-top: 65px;
             margin-bottom: 222px;
             padding: 0 168px;
             font-family: 'Helvetica', sans serif;
             font-size: 15px;
-            line-height: 25px;
+            line-height: 26px;
             color: $black;
             width: 460px;
             height: 366px;
@@ -77,14 +76,14 @@ body {
 
             p:first-child {
                 font-weight: bold;
-                line-height: 25px;
-                margin-bottom: 2rem;
+                line-height: 27px;
+                margin-bottom: 1.5rem;
                 
             }
             p:nth-child(2n),
             p:nth-child(3n),
             p:nth-child(4n) {
-                margin-bottom: 1.5rem;
+                margin-bottom: 1.45rem;
             }
             
         }
@@ -93,8 +92,7 @@ body {
             width: 20px;
             height: 0px;
             margin: 0 auto;
-            margin-top: -175px;
-            margin-bottom: 19px;
+            margin-top: -178px;
         }
         .signature {
             
@@ -117,7 +115,8 @@ body {
             text-align: center;
             width: 180px;
             height: 48px;
-            margin: 0 auto;
+            margin: 3.3rem auto 0 auto;
+            margin-top: 3.3rem;
             background: $black;
             border: none;
             color: $fake-white;

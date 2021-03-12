@@ -1,8 +1,8 @@
 /* -----FONTS-------*/
 @font-face {
-  font-family: "ABChanel Corpo";
+  font-family: "ABChanel Corpo Light";
   src: url("./assets/fonts/ABChanelCorpo-Light.ttf");
-  font-family: "ABChanel Corpo";
+  font-weight: lighter;
 }
 @font-face {
   src: url("./assets/fonts/HelveticaNeueLTStd-Lt.ttf");
@@ -89,16 +89,32 @@ body .main-container .logo img {
     z-index: 1000;
   }
 }
+body .main-container .bg-filter {
+  width: 999px;
+  height: 495px;
+  position: fixed;
+  background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+  box-shadow: inset 0px 0px 2000px 6px rgba(121, 117, 117, 0.27);
+  filter: blur(50px);
+}
 body .main-container .blurred-bg-login {
+  overflow: hidden;
   margin: 0 auto;
   width: 1002px;
   height: 497px;
-  background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.4) -0.9%, rgba(0, 0, 0, 0) 103.24%);
   border: 1px solid #ffffff;
   box-sizing: border-box;
-  -webkit-backdrop-filter: blur(42px);
-          backdrop-filter: blur(42px);
-  /* Note: backdrop-filter has minimal browser support */
+  background: inherit;
+}
+body .main-container .blurred-bg-login:before {
+  position: fixed;
+  width: 1002px;
+  height: 497px;
+  content: "";
+  background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.4) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+  box-shadow: inset 0px 0px 2000px 6px rgba(43, 42, 42, 0.46);
+  filter: blur(50px);
+  background: inherit;
 }
 @media (max-width: 768px) {
   body .main-container .blurred-bg-login {
@@ -108,11 +124,11 @@ body .main-container .blurred-bg-login {
     bottom: 44.07%;
     top: 26.8%;
     bottom: 0%;
-    background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.4) -0.9%, rgba(0, 0, 0, 0) 103.24%);
-    border: 1px solid #FFFFFF;
+    background: linear-gradient(90.29deg, rgba(32, 32, 32, 0) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+    border: 1px solid #ffffff;
     box-sizing: border-box;
-    -webkit-backdrop-filter: blur(42px);
-            backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(19px);
+            backdrop-filter: blur(19px);
   }
 }
 @media only screen and (min-device-width: 737px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -127,12 +143,13 @@ body .main-container .blurred-bg-login .introduce-code {
   align-content: center;
 }
 body .main-container .blurred-bg-login .introduce-code .introduce-text {
+  z-index: 20000;
   margin: 0 auto;
   padding-top: 136px;
   padding-left: 308px;
   padding-right: 311px;
   text-transform: uppercase;
-  font-family: "ABChanel Corpo", sans-serif;
+  font-family: "ABChanel Corpo Light", sans-serif;
   font-size: 12px;
   line-height: 24px;
   display: flex;
@@ -146,10 +163,17 @@ body .main-container .blurred-bg-login .introduce-code .introduce-text {
     padding: 0 1rem;
   }
 }
+@media only screen and (min-device-width: 737px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  body .main-container .blurred-bg-login .introduce-code .introduce-text {
+    width: auto;
+    padding: 138px 250px 0 250px;
+  }
+}
 body .main-container .blurred-bg-login .introduce-code .form-ciphers {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2000;
 }
 body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper {
   display: flex;
@@ -207,7 +231,7 @@ body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-
 }
 @media (max-width: 768px) {
   body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-code {
-    height: 38px;
+    height: 19px;
     font-size: 14px;
     line-height: 25px;
     font-family: "Helvetica Neue LTS td", sans-serif;
