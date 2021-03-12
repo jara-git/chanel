@@ -1,4 +1,4 @@
-/* POP-IN MESSAGE PRESIDENT */
+/* -----FONTS-------*/
 @font-face {
     font-family: 'ABChanel Corpo';
     src: url("./assets/fonts/ABChanelCorpo-Light.ttf");
@@ -21,11 +21,13 @@ $heading-font-family: 'ABChanel Corpo', sans-serif;
 $body-font-family: 'Helvetica Neue LTS td', sans-serif;
 $body-font-semi: 'ABChanelCorpo-SemiBold', sans-serif;
 
+/* ----- COLOURS -----*/
 $white: #ffffff;
 $black: #000000;
 $grey: #ECECEC;
 $fake-white: #F9F9F9;
 
+/* POP-IN MESSAGE PRESIDENT */
 body {
     margin: 0;
     padding: 0;
@@ -53,6 +55,13 @@ body {
         background: $white;
         text-align: center;
         font-family: $body-font-family;
+        @media (max-width: 745px) {
+            display:none;
+        }
+        @media (max-width: 746px) {
+            top: 50%;
+            position: absolute;
+        }
         .intro-text {
             margin-top: 72px;
             margin-bottom: 222px;
