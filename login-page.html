@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-page</title>
+    <link rel="stylesheet" href="login-page.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo">
+            <img src="./assets/images/logo-chanel-WFJ.svg"/>
+        </div>
+        <div class="blurred-bg-login">
+            
+            <div class="introduce-code">
+                <div class="introduce-text">
+                    <p>Entrez svp le code à 4 chiffres qui vous a été communiqué par votre conseiller chanel.</p>
+                </div>
+                <div class="form-ciphers">
+					<div class="passcode-wrapper">
+						<input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)">
+						<input id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)">
+						<input id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)">
+						<input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)">
+                    </div>
+                    <div class="forgotten-code">
+                        <p>Code oublié ?</p>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

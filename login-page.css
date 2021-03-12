@@ -1,0 +1,228 @@
+/* BLURRED BG LOGIN PAGE */
+/* -----FONTS-------*/
+@font-face {
+  font-family: "ABChanel Corpo";
+  src: url("./assets/fonts/ABChanelCorpo-Light.ttf");
+  font-family: "ABChanel Corpo";
+}
+@font-face {
+  src: url("./assets/fonts/HelveticaNeueLTStd-Lt.ttf");
+  font-family: "Helvetica Neue LTS td";
+  font-weight: normal;
+}
+@font-face {
+  src: url("assets/fonts/ABChanelCorpo-SemiBold.ttf");
+  font-family: "ABChanelCorpo-SemiBold";
+  font-weight: normal;
+}
+/* ----- COLOURS -----*/
+/*----- MEDIA QUERIES----*/
+/* BLURRED BG LOGIN PAGE */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+body .main-container {
+  background: url("/assets/images/visuel-vertical-1.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+body .main-container .logo {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+body .main-container .logo img {
+  z-index: 1000;
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  top: 1.44%;
+  bottom: 79.11%;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  body .main-container .logo img {
+    top: 0%;
+    margin: 0 auto;
+    z-index: 1000;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) and (orientation: portrait) {
+  body .main-container .logo img {
+    margin: 0 auto;
+    top: 13%;
+    z-index: 1000;
+  }
+}
+@media (min-width: 375px) and (max-width: 414px) and (orientation: portrait) {
+  body .main-container .logo img {
+    margin: 0 auto;
+    top: 20%;
+    z-index: 1000;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  body .main-container .logo img {
+    margin: 0 auto;
+    top: 23%;
+    z-index: 1000;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  body .main-container .logo img {
+    top: -25px;
+    margin: 0 auto;
+    z-index: 1000;
+  }
+}
+body .main-container .blurred-bg-login {
+  margin: 0 auto;
+  width: 1002px;
+  height: 497px;
+  background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.4) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(42px);
+          backdrop-filter: blur(42px);
+  /* Note: backdrop-filter has minimal browser support */
+}
+@media (max-width: 768px) {
+  body .main-container .blurred-bg-login {
+    margin: 0 auto;
+    width: 320px;
+    height: 388px;
+    bottom: 44.07%;
+    top: 26.8%;
+    bottom: 0%;
+    background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.4) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur(42px);
+            backdrop-filter: blur(42px);
+  }
+}
+@media only screen and (min-device-width: 737px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  body .main-container .blurred-bg-login {
+    width: 812px;
+  }
+}
+body .main-container .blurred-bg-login .introduce-code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+body .main-container .blurred-bg-login .introduce-code .introduce-text {
+  margin: 0 auto;
+  padding-top: 136px;
+  padding-left: 308px;
+  padding-right: 311px;
+  text-transform: uppercase;
+  font-family: "ABChanel Corpo", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  body .main-container .blurred-bg-login .introduce-code .introduce-text {
+    margin-top: 104px;
+    padding: 0 1rem;
+  }
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input {
+  width: 40px;
+  height: 47px;
+  padding: 0;
+  margin-right: 10px;
+  text-align: center;
+  font-family: "ABChanelCorpo-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input:last-child {
+  margin-right: 0;
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input::-webkit-inner-spin-button, body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input:focus, body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input.focus {
+  border-color: #ffffff;
+  outline: none;
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input {
+    width: 50px;
+    height: 60px;
+  }
+}
+body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-code {
+  margin: 0 auto;
+  height: 38px;
+  font-family: "Helvetica Neue LTS td", sans-serif;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ECECEC;
+  opacity: 0.7;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-code {
+    height: 38px;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: "Helvetica Neue LTS td", sans-serif;
+    font-style: normal;
+    padding-top: 60px;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  body .main-container {
+    background: url("/assets/images/visuel-vertcal-mobile.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+}/*# sourceMappingURL=login-page.css.map */
