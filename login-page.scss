@@ -1,25 +1,38 @@
 /* -----FONTS-------*/
 @font-face {
     font-family: 'ABChanel Corpo Light';
-    src: url("./assets/fonts/ABChanelCorpo-Light.ttf");
-    font-weight: lighter;
+    src: url("./assets/fonts/ABChanel_Corpo-Light_web.ttf");    
 }
 
 @font-face {
-    src: url("./assets/fonts/HelveticaNeueLTStd-Lt.ttf");
-    font-family: 'Helvetica Neue LTS td';
-    font-weight: normal;
+    src: url("./assets/fonts/Helvetica.ttf");
+    font-family: 'Helvetica';
+    font-weight: 400;
 }
 
 @font-face {
-    src: url("assets/fonts/ABChanelCorpo-SemiBold.ttf");
+    src: url("assets/fonts/ABChanel_Corpo-Semi_Bold_web.ttf");
     font-family: 'ABChanelCorpo-SemiBold';
     font-weight: normal;
 }
 
+@font-face {
+    src: url("assets/fonts/ABChanel_Corpo-Extra_Light_web.ttf");
+    font-family: 'ABChanel Corpo extra light';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url("assets/fonts/ABChanel_Corpo-Regular_web.ttf");
+    font-family: 'ABChanel Corpo regular';
+    font-weight: normal;
+}
+
 $heading-font-family: 'ABChanel Corpo Light', sans-serif;
-$body-font-family: 'Helvetica Neue LTS td', sans-serif;
+$body-font-family: 'Helvetica', sans-serif;
 $body-font-semi: 'ABChanelCorpo-SemiBold', sans-serif;
+$body-font-regular: 'ABChanel Corpo Regular', sans-serif;
+$body-font-xlight: 'ABChanel Corpo extra light', sans-serif;
 
 /* ----- COLOURS -----*/
 $white: #ffffff;

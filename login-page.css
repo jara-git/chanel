@@ -1,17 +1,26 @@
 /* -----FONTS-------*/
 @font-face {
   font-family: "ABChanel Corpo Light";
-  src: url("./assets/fonts/ABChanelCorpo-Light.ttf");
-  font-weight: lighter;
+  src: url("./assets/fonts/ABChanel_Corpo-Light_web.ttf");
 }
 @font-face {
-  src: url("./assets/fonts/HelveticaNeueLTStd-Lt.ttf");
-  font-family: "Helvetica Neue LTS td";
+  src: url("./assets/fonts/Helvetica.ttf");
+  font-family: "Helvetica";
+  font-weight: 400;
+}
+@font-face {
+  src: url("assets/fonts/ABChanel_Corpo-Semi_Bold_web.ttf");
+  font-family: "ABChanelCorpo-SemiBold";
   font-weight: normal;
 }
 @font-face {
-  src: url("assets/fonts/ABChanelCorpo-SemiBold.ttf");
-  font-family: "ABChanelCorpo-SemiBold";
+  src: url("assets/fonts/ABChanel_Corpo-Extra_Light_web.ttf");
+  font-family: "ABChanel Corpo extra light";
+  font-weight: normal;
+}
+@font-face {
+  src: url("assets/fonts/ABChanel_Corpo-Regular_web.ttf");
+  font-family: "ABChanel Corpo regular";
   font-weight: normal;
 }
 /* ----- COLOURS -----*/
@@ -219,7 +228,7 @@ body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-w
 body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-code {
   margin: 0 auto;
   height: 52px;
-  font-family: "Helvetica Neue LTS td", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-style: normal;
   font-size: 10px;
   line-height: 15px;
@@ -235,7 +244,7 @@ body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-
     height: 19px;
     font-size: 14px;
     line-height: 25px;
-    font-family: "Helvetica Neue LTS td", sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-style: normal;
     padding-top: 60px;
     align-items: center;
