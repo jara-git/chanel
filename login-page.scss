@@ -405,7 +405,7 @@ body {
                 width: 999px;
                 height: 495px;
                 position: fixed;
-                background: linear-gradient(90.29deg, rgb(0 0 0 / 53%) -0.9%, rgb(0 0 0 / 0%) 103.24%);
+                background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
                 box-shadow: inset 0px 0px 2000px 6px rgb(121 117 117 / 27%);
                 filter: blur(50px);
             }
@@ -423,9 +423,9 @@ body {
                     width: 1002px;
                     height: 497px;
                     content: '';
-                    background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.4) -0.9%, rgba(0, 0, 0, 0) 103.24%);
-                    box-shadow: inset 0px 0px 2000px 6px rgb(43 42 42 / 46%);
-                    filter: blur(50px);
+                    background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+                    box-shadow: inset 0px 0px 2000px 6px rgb(121 117 117 / 27%);
+                    filter: blur(13px);
                     background: inherit;
                 }
   
@@ -458,7 +458,7 @@ body {
                     .introduce-text {
                         z-index: 20000;
                         margin: 0 auto;
-                        padding-top: 136px;
+                        padding-top: 153px;
                         padding-left: 308px;
                         padding-right: 311px;
                         text-transform: uppercase;
@@ -487,6 +487,7 @@ body {
                         flex-direction: column;
                         justify-content: center;
                         z-index: 2000;
+                        margin-top: 0.45rem;
                         .passcode-wrapper {
                             display: flex;
                             flex-direction: row;
@@ -530,7 +531,7 @@ body {
                     }
                         .forgotten-code {
                             margin: 0 auto;
-                            height: 38px;
+                            height: 52px;
                             font-family: $body-font-family;
                             font-style: normal;
                             font-size: 10px;

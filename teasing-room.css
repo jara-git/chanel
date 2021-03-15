@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -----FONTS-------*/
 @font-face {
   font-family: "ABChanel Corpo Light";
@@ -19,50 +20,187 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  overflow: hidden;
 }
-body .teasing-container {
+
+.teasing-room {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.teasing-room .teasing-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  position: absolute;
-  width: 1440px;
   height: 1155px;
   background-color: #000000;
-  width: 100%;
-  height: 100vh;
 }
-body .teasing-container .logo {
+.teasing-room .teasing-container .logo {
   display: flex;
   justify-content: center;
 }
-body .teasing-container .logo img {
+.teasing-room .teasing-container .logo img {
   margin: 0 auto;
   z-index: 1000;
   position: absolute;
   width: 175px;
   height: 175px;
-  bottom: 84%;
+  bottom: 87%;
 }
-body .teasing-container .collection-logo {
+.teasing-room .teasing-container .collection-title .collection-logo {
   display: flex;
   justify-content: center;
 }
-body .teasing-container .collection-logo img {
+.teasing-room .teasing-container .collection-title .collection-logo img {
   margin: 0 auto;
   z-index: 1000;
   width: 300px;
   position: absolute;
-  bottom: 80%;
+  bottom: 82%;
 }
-body .teasing-container .video-container {
+.teasing-room .teasing-container .collection-title .subtitle {
+  text-transform: uppercase;
+  color: #D8D8D8;
+  font-family: ABChanel Corpo Light;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 24px;
+  line-height: 10px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 30rem;
+  z-index: 2000;
+}
+.teasing-room .teasing-container .collection-title .subtitle p:first-child {
+  font-family: "ABChanel Corpo Light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 24px;
+  line-height: 10px;
+}
+.teasing-room .teasing-container .collection-title .subtitle :nth-child(2n) {
+  font-family: "ABChanelCorpo-SemiBold", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 10px;
+}
+.teasing-room .teasing-container .video-container {
   display: flex;
   margin: 0 auto;
   justify-content: center;
 }
-body .teasing-container .video-container .teaser {
+.teasing-room .teasing-container .video-container .teaser {
   width: 1176px;
   height: 660px;
+  position: absolute;
+  top: 31%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+  /* SET GOUACHÉS */
+  position: relative;
+  height: auto;
+  top: 81%;
+}
+.wrapper .gallery-container {
+  margin-top: 1rem;
+}
+.wrapper .gallery-container h2, .wrapper .gallery-container p {
+  color: #000000;
+}
+.wrapper .gallery-container .masonry-gallery {
+  list-style: none;
+  margin: 0 auto;
+  width: 56%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 6px;
+}
+.wrapper .gallery-container .masonry-gallery *,
+.wrapper .gallery-container .masonry-gallery *::after,
+.wrapper .gallery-container .masonry-gallery *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.wrapper .gallery-container .masonry-gallery .gallery__item--1 {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.wrapper .gallery-container .masonry-gallery .gallery__item--2 {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.wrapper .gallery-container .masonry-gallery .gallery__item--3 {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.wrapper .gallery-container .masonry-gallery .gallery__item--4 {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.wrapper .gallery-container .masonry-gallery .gallery__item--big {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
+  padding: 0;
+  margin: 0 4rem;
+  width: 100vw;
+  position: absolute;
+  height: 256px;
+  left: 0px;
+  top: 2070px;
+}
+footer .legal-terms {
+  width: 908px;
+  height: 53px;
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #B6B6B6;
+}
+footer .logo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }/*# sourceMappingURL=teasing-room.css.map */

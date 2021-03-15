@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,103 @@
     <title>Teasing room</title>
     <link rel="stylesheet" href="teasing-room.css">
 </head>
+
 <body>
-    <div class="teasing-container">
-        <div class="logo">
-            <img src="./assets/images/logo-chanel-WFJ.svg" alt="logo-chanel"/>
-        </div>
-        <div class="collection-logo">
-            <img src="./assets/images/collection-n5.svg" alt="logo collection nº 5">
-        </div>
-        <div class="video-container">
-            
-            <div class="teaser">
-                <img src="./assets/images/video-teaser.png"/>
+    <div class="teasing-room">
+        <div class="teasing-container">
+            <div class="logo">
+                <img src="./assets/images/logo-chanel-WFJ.svg" alt="logo-chanel" />
             </div>
+            <div class="collection-title">
+                <div class="collection-logo">
+                    <img src="./assets/images/collection-n5.svg" alt="logo collection nº 5">
+                </div>
+                <div class="subtitle">
+                    <span><p>VOTRE PRésentation commence dans</p>
+                    <p>02M 38s</p></span>
+                </div>
+            </div>
+            
+            <div class="video-container">
+
+                <ol class="indicators">
+                    <li data-target="#" data-slide-to="0" class="active"></li>
+                    <li data-target="#" data-slide-to="1"></li>
+                    <li data-target="#" data-slide-to="2"></li>
+                </ol>
+
+                <div class="video-controls">
+                    <a class="control-prev" href="#" role="button" data-slide="prev">
+                        <span class="control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="control-next" href="# role=" button" data-slide="next">
+                        <span class="control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div class="teaser">
+                    <img src="./assets/images/video-teaser.png" alt="video teaser" />
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <ol class="indicators">
+                    <li data-target="#" data-slide-to="0" class="active"></li>
+                    <li data-target="#" data-slide-to="1"></li>
+                    <li data-target="#" data-slide-to="2"></li>
+                </ol>
+
+                <div class="gallery-controls">
+                    <a class="control-prev" href="#" role="button" data-slide="prev">
+                        <span class="control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="control-next" href="# role=" button" data-slide="next">
+                        <span class="control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+                <div class="gallery-container">
+                    <h2>Découvrir les gouachés de la sélection</h2>
+                    <p>- camelia vénitien -</p>
+                    <ul class="masonry-gallery">
+                        <li class="gallery__item gallery__item--big">
+                            <img class="gallery__img" src="./assets/images/big-preview.png" alt="big preview" />
+                        </li>
+                        <li class="gallery__item gallery__item--1">
+                            <img class="gallery__img" src="./assets/images/preview-piece1.png" alt="small preview" />
+                        </li>
+                        <li class="gallery__item gallery__item--2">
+                            <img class="gallery__img" src="./assets/images/preview-piece2.png" alt="small preview" />
+                        </li>
+                        <li class="gallery__item gallery__item--3">
+                            <img class="gallery__img" src="./assets/images/preview-piece3.png" alt="small preview" />
+                        </li>
+                        <li class="gallery__item gallery__item--4">
+                            <img class="gallery__img" src="./assets/images/preview-piece.png" alt="small preview" />
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <footer>
+                <div class="legal-terms">
+                    <p>Afin de permettre à CHANEL d’organiser une expérience vidéo personnalisée, nous aurons besoin de
+                        traiter des informations sur les flux d’images. Ces informations ne seront pas enregistrées.
+                        Vous pouvez obtenir des informations générales sur la collecte et le traitement de vos données à
+                        caractère personnel par CHANEL, en particulier concernant vos droits sur vos données, via notre
+                        Politique de confidentialité.</p>
+                </div>
+                <div class="logo-footer">
+                    <img src="./assets/images/logo-chanel-black.svg" alt="logo-chanel" />
+                </div>
+            </footer>
         </div>
     </div>
 </body>
+
 </html>
