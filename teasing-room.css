@@ -159,19 +159,18 @@ body {
   color: #ffffff;
 }
 .teasing-room .teasing-container .video-container .control-prev {
-  margin-right: 10%;
-  left: 10%;
+  right: 84.5%;
+  margin-right: 8.5rem;
 }
 .teasing-room .teasing-container .video-container .control-next {
-  margin-left: 10%;
-  right: 10%;
+  left: 84.5%;
+  margin-left: 8.5rem;
 }
 .teasing-room .teasing-container .video-container .teaser {
   position: absolute;
   top: 31%;
   display: flex;
   justify-content: center;
-  border: 1px solid white;
   height: 0;
   overflow: hidden;
   padding-bottom: 56.25%;
@@ -226,17 +225,39 @@ body {
 .wrapper {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   padding-bottom: 2.5rem;
   text-align: center;
   position: relative;
   height: auto;
-  top: 38%;
+  top: 32%;
 }
 .wrapper .gallery-controls {
-  top: 50%;
+  top: 55%;
+  width: 100%;
   position: absolute;
-  border: 2px solid red;
+}
+.wrapper .gallery-controls .control-prev,
+.wrapper .gallery-controls .control-next {
+  cursor: pointer;
+  width: auto;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  z-index: 2000;
+  text-decoration: none;
+  position: relative;
+}
+.wrapper .gallery-controls .control-prev:hover,
+.wrapper .gallery-controls .control-next:hover {
+  color: #ffffff;
+}
+.wrapper .gallery-controls .control-prev {
+  right: 35.5%;
+}
+.wrapper .gallery-controls .control-next {
+  left: 35.5%;
 }
 .wrapper ol.gallery-indicators {
   color: #000000;
@@ -247,7 +268,7 @@ body {
   padding: 0;
   justify-content: space-evenly;
   justify-content: flex-start;
-  height: 20px;
+  height: 11px;
   bottom: 0;
   left: 46.5%;
   position: absolute;
@@ -268,9 +289,9 @@ body {
   font-size: 12px;
   line-height: 150%;
   margin-right: 1rem;
+  border: 1px solid red;
 }
 .wrapper .gallery-container {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -286,6 +307,7 @@ body {
   line-height: 124%;
 }
 .wrapper .gallery-container p {
+  margin: 5rem 0 2rem 0;
   color: #000000;
   font-family: "ABChanelCorpo-SemiBold", sans-serif;
   font-weight: 600;
