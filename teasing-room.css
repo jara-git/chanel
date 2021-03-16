@@ -553,7 +553,15 @@ footer .logo-footer img {
   }
 }
 footer .logo-footer-mobile {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .logo-footer-mobile img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 450px;
 }
 @media (min-width: 748px) {
   footer .logo-footer-mobile {
