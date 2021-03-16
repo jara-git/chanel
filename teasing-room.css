@@ -282,6 +282,13 @@ body {
   background: transparent;
   color: white;
 }
+@media (max-width: 767px) {
+  .teasing-room .teasing-container .video-container .player .btn-play {
+    height: 44px;
+    width: 44px;
+    bottom: 222px;
+  }
+}
 .teasing-room .teasing-container .video-container .player label {
   color: white;
   font-weight: bold;
@@ -299,6 +306,11 @@ body {
   display: flex;
   align-items: center;
   margin-left: 4.7rem;
+}
+@media (max-width: 767px) {
+  .teasing-room .teasing-container .video-container .player label {
+    display: none;
+  }
 }
 
 .wrapper {
@@ -386,6 +398,19 @@ body {
   font-weight: 600;
   font-size: 25px;
   line-height: 124%;
+}
+@media (max-width: 767px) {
+  .wrapper .gallery-container h2 {
+    font-family: "ABChanel Corpo Light", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1px;
+    padding: 0 67px;
+  }
 }
 .wrapper .gallery-container p {
   margin: 5rem 0 2rem 0;
@@ -488,6 +513,25 @@ footer .legal-terms {
   letter-spacing: 0.1px;
   color: #B6B6B6;
 }
+@media (max-width: 747px) {
+  footer .legal-terms {
+    padding: 0;
+    width: 89%;
+    font-size: 10px;
+    line-height: 18px;
+    height: 288px;
+    margin-bottom: 1rem;
+  }
+  footer .legal-terms:after {
+    content: "";
+    position: absolute;
+    bottom: 79px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 1rem;
+    width: 90%;
+    left: 5%;
+  }
+}
 footer .logo-footer {
   display: flex;
   flex-direction: column;
@@ -502,4 +546,17 @@ footer .logo-footer img {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  footer .logo-footer {
+    display: none;
+  }
+}
+footer .logo-footer-mobile {
+  margin-top: 0;
+}
+@media (min-width: 748px) {
+  footer .logo-footer-mobile {
+    display: none;
+  }
 }/*# sourceMappingURL=teasing-room.css.map */
