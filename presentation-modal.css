@@ -25,20 +25,12 @@
 }
 /* ----- COLOURS -----*/
 /* POP-IN MESSAGE PRESIDENT */
-<<<<<<< HEAD
-=======
-
->>>>>>> af2e3ccd147535a8af82fa9e19a392a5002c485b
 html {
   scroll-behavior: smooth;
   -webkit-user-select: none;
   -ms-user-select: none;
-<<<<<<< HEAD
   -moz-user-select: none;
        user-select: none;
-=======
-  user-select: none;
->>>>>>> af2e3ccd147535a8af82fa9e19a392a5002c485b
 }
 
 body {
@@ -70,17 +62,6 @@ body {
   text-align: center;
   font-family: "Helvetica", sans-serif;
 }
-@media (max-width: 745px) {
-  .background-modal .presentation-modal {
-    display: none;
-  }
-}
-@media (max-width: 746px) {
-  .background-modal .presentation-modal {
-    top: 50%;
-    position: absolute;
-  }
-}
 .background-modal .presentation-modal .intro-text {
   margin-top: 65px;
   margin-bottom: 222px;
@@ -100,8 +81,12 @@ body {
   line-height: 27px;
   margin-bottom: 1.5rem;
 }
-.background-modal .presentation-modal .intro-text p:nth-child(2n),
-.background-modal .presentation-modal .intro-text p:nth-child(3n),
+.background-modal .presentation-modal .intro-text p:nth-child(2n) {
+  margin-bottom: 1.45rem;
+}
+.background-modal .presentation-modal .intro-text p:nth-child(3n) {
+  margin-bottom: 1.45rem;
+}
 .background-modal .presentation-modal .intro-text p:nth-child(4n) {
   margin-bottom: 1.45rem;
 }
@@ -140,4 +125,16 @@ body {
   font-size: 11px;
   line-height: 127%;
   display: flex;
+}
+
+@media (max-width: 745px) {
+  .background-modal .presentation-modal {
+    display: none;
+  }
+}
+@media (max-width: 746px) {
+  .background-modal .presentation-modal {
+    top: 50%;
+    position: absolute;
+  }
 }/*# sourceMappingURL=presentation-modal.css.map */
