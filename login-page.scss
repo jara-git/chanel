@@ -37,7 +37,7 @@ $body-font-xlight: 'ABChanel Corpo extra light', sans-serif;
 /* ----- COLOURS -----*/
 $white: #ffffff;
 $black: #000000;
-$grey: #ECECEC;
+$grey: $grey;
 $fake-white: #F9F9F9;
 
 /*----- MEDIA QUERIES----*/
@@ -57,249 +57,293 @@ html {
 	user-select: none;
 }
 body {
-    margin: 0;
-    padding:0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    overflow: hidden;
-
-    .main-container{
-        background: url('/assets/images/visuel-vertical-1.png') no-repeat;
-        background-size: cover;
-        background-attachment:fixed;
-        background-repeat:no-repeat;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        background-position: center center; 
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-            .logo {
-                display: flex;
-                margin: 0 auto;
-                justify-content: center;
-                
-                img {
-                    z-index: 1000;
-                    position: absolute;
-                    width: 175px;
-                    height:175px;
-                    top: 1.44%;
-                    bottom: 79.11%;
-                    
-                    @media (min-width: 320px) and 
-                     (max-width: 768px) {
-                        top: 0%;
-                        margin: 0 auto;
-                        z-index: 1000;
-                    }
-                    @media (min-width: 320px) and 
-                    (max-width: 374px) and  
-                    (orientation : portrait){
-                        margin: 0 auto;
-                        top: 13%;
-                        z-index: 1000;
-                    }
-                    @media (min-width: 375px) and 
-                    (max-width: 414px) and  
-                    (orientation : portrait){
-                        margin: 0 auto;
-                        top: 20%;
-                        z-index: 1000;
-                    }
-                    @media only screen 
-                    and (device-width : 375px) 
-                    and (device-height : 812px) 
-                    and (-webkit-device-pixel-ratio : 3) and 
-                    (orientation : portrait){
-                        margin: 0 auto;
-                        top: 23%;
-                        z-index: 1000;
-                    }
-                    @media only screen
-                    and (min-device-width: 375px)
-                    and (max-device-width: 667px)
-                    and (-webkit-min-device-pixel-ratio: 2)
-                    and (orientation: landscape) {
-                        top: -25px;
-                        margin: 0 auto;
-                        z-index: 1000;
-                    }
-                }
-                
-            }
-            .bg-filter {
-                width: 999px;
-                height: 495px;
-                position: fixed;
-                background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
-                box-shadow: inset 0px 0px 2000px 6px rgb(121 117 117 / 27%);
-                filter: blur(50px);
-            }
-            .blurred-bg-login {
-                overflow: hidden;
-                margin: 0 auto;
-                width: 1002px;
-                height: 497px;
-                border: 1px solid $white;
-                box-sizing: border-box;
-                background: inherit;
-                
-                &:before {
-                    position: fixed;
-                    width: 1002px;
-                    height: 497px;
-                    content: '';
-                    background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
-                    box-shadow: inset 0px 0px 2000px 6px rgb(121 117 117 / 27%);
-                    filter: blur(13px);
-                    background: inherit;
-                }
-  
-
-                @media (max-width:768px){
-                    margin: 0 auto;
-                    width: 320px;
-                    height: 388px;
-                    bottom: 44.07%;
-                    top: 26.8%;
-                    bottom: 0%;
-                    background: linear-gradient(90.29deg, rgba(32, 32, 32, 0) -0.9%, rgba(0, 0, 0, 0) 103.24%);
-                    border: 1px solid $white;
-                    box-sizing: border-box;
-                    backdrop-filter: blur(19px);
-                }
-
-                @media only screen
-                    and (min-device-width: 737px)
-                    and (max-device-width: 812px)
-                    and (-webkit-min-device-pixel-ratio: 2)
-                    and (orientation: landscape) {
-                        width: 812px;
-                    }
-                .introduce-code {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-content: center;
-                    .introduce-text {
-                        z-index: 20000;
-                        margin: 0 auto;
-                        padding-top: 153px;
-                        padding-left: 308px;
-                        padding-right: 311px;
-                        text-transform: uppercase;
-                        font-family: $heading-font-family;
-                        font-size: 12px;
-                        line-height: 24px;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-                        color: $white;
-                        @media (max-width:768px){
-                            margin-top: 104px;
-                            padding: 0 1rem;
-                        }
-                        @media only screen
-                        and (min-device-width: 737px)
-                        and (max-device-width: 812px)
-                        and (-webkit-min-device-pixel-ratio: 2)
-                        and (orientation: landscape) {
-                            width: auto;
-                            padding: 138px 250px 0 250px;
-                        }
-                    }
-                    .form-ciphers {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        z-index: 2000;
-                        margin-top: 0.45rem;
-                        .passcode-wrapper {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            width: auto;
-                            margin: 0 auto;
-                            margin-top: 1rem;
-                        input {
-                            width: 40px;
-                            height: 47px;
-                            padding: 0;
-                            margin-right: 10px;
-                            text-align: center;
-                            font-family: $body-font-semi;
-                            font-size: 16px;
-                            line-height: 23px;
-                            color: $black;
-                            border: 1px solid $white;
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                            &::-webkit-inner-spin-button, 
-                            &::-webkit-outer-spin-button { 
-                                -webkit-appearance: none;
-                                appearance: none;
-                                margin: 0;
-                            }
-                            &:focus,
-                            &.focus {
-                                border-color: $white;
-                                outline: none;
-                                box-shadow: none;
-                            }
-                            @media (max-width:768px){
-                                width: 50px;
-                                height: 60px;
-                            }
-
-                        }
-                    }
-                        .forgotten-code {
-                            margin: 0 auto;
-                            height: 52px;
-                            font-family: $body-font-family;
-                            font-style: normal;
-                            font-size: 10px;
-                            line-height: 15px;
-                            display: flex;
-                            align-items: center;
-                            text-align: center;
-                            color: $grey;
-                            opacity: 0.7;
-                            text-decoration: underline;
-
-                            @media (max-width: 768px) {
-                                height: 19px;
-                                font-size: 14px;
-                                line-height: 25px;
-                                font-family: $body-font-family;
-                                font-style: normal;
-                                padding-top: 60px;
-                                align-items: center;
-                                text-align: center;
-                            }
-
-                        }
-                
-                   }
-                    
-            }
-        }
-
-        @media (max-width:768px){
-            background: url('/assets/images/visuel-vertcal-mobile.png') no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100vh;
-            
-        }
-        
-    }
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+	.main-container {
+		background: url("./assets/images/visuel-vertical-1.png") no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-position: center center;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		.logo {
+			display: flex;
+			margin: 0 auto;
+			justify-content: center;
+			img {
+				z-index: 1000;
+				position: absolute;
+				width: 175px;
+				height: 175px;
+				top: 1.44%;
+				bottom: 79.11%;
+			}
+		}
+		.bg-filter {
+			width: 999px;
+			height: 495px;
+			position: fixed;
+			background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+			box-shadow: inset 0px 0px 2000px 6px rgba(121, 117, 117, 0.27);
+			filter: blur(50px);
+		}
+		.blurred-bg-login {
+			overflow: hidden;
+			margin: 0 auto;
+			width: 1002px;
+			height: 497px;
+			border: 1px solid $white;
+			box-sizing: border-box;
+			background: inherit;
+			&:before {
+				position: fixed;
+				width: 1002px;
+				height: 497px;
+				content: "";
+				background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+				box-shadow: inset 0px 0px 2000px 6px rgba(121, 117, 117, 0.27);
+				filter: blur(13px);
+				background: inherit;
+			}
+			.introduce-code {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-content: center;
+				.introduce-text {
+					z-index: 20000;
+					margin: 0 auto;
+					padding-top: 153px;
+					padding-left: 308px;
+					padding-right: 311px;
+					text-transform: uppercase;
+					font-family: "ABChanel Corpo Light", sans-serif;
+					font-size: 12px;
+					line-height: 24px;
+					display: flex;
+					align-items: center;
+					text-align: center;
+					color: $white;
+				}
+				.form-ciphers {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					z-index: 2000;
+					margin-top: 0.45rem;
+					.passcode-wrapper {
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						width: auto;
+						margin: 0 auto;
+						margin-top: 1rem;
+						input {
+							width: 40px;
+							height: 47px;
+							padding: 0;
+							margin-right: 10px;
+							text-align: center;
+							font-family: "ABChanelCorpo-SemiBold", sans-serif;
+							font-size: 16px;
+							line-height: 23px;
+							color: #000000;
+							border: 1px solid $white;
+							&:last-child {
+								margin-right: 0;
+							}
+							&::-webkit-inner-spin-button {
+								-webkit-appearance: none;
+								appearance: none;
+								margin: 0;
+							}
+							&::-webkit-outer-spin-button {
+								-webkit-appearance: none;
+								appearance: none;
+								margin: 0;
+							}
+							&:focus {
+								border-color: $white;
+								outline: none;
+								box-shadow: none;
+							}
+						}
+						input.focus {
+							border-color: $white;
+							outline: none;
+							box-shadow: none;
+						}
+					}
+					.forgotten-code {
+						margin: 0 auto;
+						height: 52px;
+						font-family: "Helvetica", sans-serif;
+						font-style: normal;
+						font-size: 10px;
+						line-height: 15px;
+						display: flex;
+						align-items: center;
+						text-align: center;
+						color: $grey;
+						opacity: 0.7;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 320px) 
+and (max-width: 768px) {
+	body {
+		.main-container {
+			.logo {
+				img {
+					top: 0%;
+					margin: 0 auto;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 320px) 
+and (max-width: 374px) and 
+(orientation: portrait) {
+	body {
+		.main-container {
+			.logo {
+				img {
+					margin: 0 auto;
+					top: 13%;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 375px) 
+and (max-width: 414px) and 
+(orientation: portrait) {
+	body {
+		.main-container {
+			.logo {
+				img {
+					margin: 0 auto;
+					top: 20%;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
+@media only screen and (device-width: 375px) 
+and (device-height: 812px) and 
+(-webkit-device-pixel-ratio: 3) and 
+(orientation: portrait) {
+	body {
+		.main-container {
+			.logo {
+				img {
+					margin: 0 auto;
+					top: 23%;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-device-width: 375px) 
+and (max-device-width: 667px) and 
+(-webkit-min-device-pixel-ratio: 2) and 
+(orientation: landscape) {
+	body {
+		.main-container {
+			.logo {
+				img {
+					top: -25px;
+					margin: 0 auto;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	body {
+		.main-container {
+			.blurred-bg-login {
+				margin: 0 auto;
+				width: 320px;
+				height: 388px;
+				bottom: 44.07%;
+				top: 26.8%;
+				bottom: 0%;
+				background: linear-gradient(90.29deg, rgba(32, 32, 32, 0) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+				border: 1px solid $white;
+				box-sizing: border-box;
+				-webkit-backdrop-filter: blur(19px);
+				backdrop-filter: blur(19px);
+				.introduce-code {
+					.introduce-text {
+						margin-top: 104px;
+						padding: 0 1rem;
+					}
+					.form-ciphers {
+						.passcode-wrapper {
+							input {
+								width: 50px;
+								height: 60px;
+							}
+						}
+						.forgotten-code {
+							height: 19px;
+							font-size: 14px;
+							line-height: 25px;
+							font-family: "Helvetica", sans-serif;
+							font-style: normal;
+							padding-top: 60px;
+							align-items: center;
+							text-align: center;
+						}
+					}
+				}
+			}
+			background: url("./assets/images/visuel-vertcal-mobile.png") no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100vh;
+		}
+	}
+}
+@media only screen and (min-device-width: 737px) and 
+(max-device-width: 812px) and 
+(-webkit-min-device-pixel-ratio: 2) and 
+(orientation: landscape) {
+	body {
+		.main-container {
+			.blurred-bg-login {
+				width: 812px;
+				.introduce-code {
+					.introduce-text {
+						width: auto;
+						padding: 138px 250px 0 250px;
+					}
+				}
+			}
+		}
+	}
 }

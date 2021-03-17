@@ -26,20 +26,11 @@
 /* ----- COLOURS -----*/
 /*----- MEDIA QUERIES----*/
 /* BLURRED BG LOGIN PAGE */
-<<<<<<< HEAD
-=======
-
->>>>>>> af2e3ccd147535a8af82fa9e19a392a5002c485b
 html {
   scroll-behavior: smooth;
   -webkit-user-select: none;
   -ms-user-select: none;
-<<<<<<< HEAD
-  -moz-user-select: none;
-       user-select: none;
-=======
   user-select: none;
->>>>>>> af2e3ccd147535a8af82fa9e19a392a5002c485b
 }
 
 body {
