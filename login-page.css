@@ -26,6 +26,14 @@
 /* ----- COLOURS -----*/
 /*----- MEDIA QUERIES----*/
 /* BLURRED BG LOGIN PAGE */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body {
   margin: 0;
   padding: 0;
