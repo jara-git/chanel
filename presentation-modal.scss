@@ -41,6 +41,13 @@ $grey: #ECECEC;
 $fake-white: #F9F9F9;
 
 /* POP-IN MESSAGE PRESIDENT */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 body {
     margin: 0;
     padding: 0;

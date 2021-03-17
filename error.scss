@@ -50,12 +50,7 @@ $breakpoints: (phone: 640px,
 /* BLURRED BG LOGIN PAGE */
 
 
-html {
-	scroll-behavior: smooth;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
+
 body {
     margin: 0;
     padding:0;
@@ -65,7 +60,7 @@ body {
     overflow: hidden;
 
     .main-container{
-        background: url('/assets/images/visuel-vertical-1.png') no-repeat;
+        background: url('./assets/images/visuel-vertical-1.png');
         background-size: cover;
         background-attachment:fixed;
         background-repeat:no-repeat;
@@ -140,6 +135,7 @@ body {
                 background: linear-gradient(90.29deg, rgba(0, 0, 0, 0.53) -0.9%, rgba(0, 0, 0, 0) 103.24%);
                 box-shadow: inset 0px 0px 2000px 6px rgb(121 117 117 / 27%);
                 filter: blur(50px);
+                
             }
             .blurred-bg-login {
                 overflow: hidden;
@@ -149,6 +145,12 @@ body {
                 border: 1px solid $white;
                 box-sizing: border-box;
                 background: inherit;
+
+                @media (min-width: 641px)
+                and (max-width: 768px) and
+                (orientation : portrait) {
+                    width: 620px;
+                }
                 
                 &:before {
                     position: fixed;
@@ -162,9 +164,22 @@ body {
                 }
   
 
-                @media (max-width:768px){
+                @media (max-width:639px){
                     margin: 0 auto;
                     width: 320px;
+                    height: 388px;
+                    bottom: 44.07%;
+                    top: 26.8%;
+                    bottom: 0%;
+                    background: linear-gradient(90.29deg, rgba(32, 32, 32, 0) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+                    border: 1px solid $white;
+                    box-sizing: border-box;
+                    backdrop-filter: blur(19px);
+                }
+                @media (min-width: 640px) and
+                (max-width:768px){
+                    margin: 0 auto;
+                    width: 620px;
                     height: 388px;
                     bottom: 44.07%;
                     top: 26.8%;
@@ -182,119 +197,75 @@ body {
                     and (orientation: landscape) {
                         width: 812px;
                     }
-                .introduce-code {
+            
+            .error-msg {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                color: $white;
+                text-align: center;
+
+                .error-title,
+                .error-content,
+                .backhome {
                     display: flex;
-                    flex-direction: column;
+                    align-items: center;
+                    z-index: 1000;
                     justify-content: center;
-                    align-content: center;
-                    .introduce-text {
-                        z-index: 20000;
-                        margin: 0 auto;
-                        padding-top: 153px;
-                        padding-left: 308px;
-                        padding-right: 311px;
-                        text-transform: uppercase;
-                        font-family: $heading-font-family;
+                }
+
+                .error-title {
+                    font-family: $body-font-semi;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 130%;
+                    z-index: 20000;
+                    padding-top: 153px;
+
+                    @media (max-width: 747px) {
+                        font-size: 16px;
+                        
+                    }
+                }
+                .error-content {
+                    font-family: $heading-font-family;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 24px;
+                    @media (min-width: 1024px){
+                        padding: 0 18rem;
+                    }
+                    @media (min-width: 320px) and 
+                    (max-width: 640px) {
                         font-size: 12px;
                         line-height: 24px;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-                        color: $white;
-                        @media (max-width:768px){
-                            margin-top: 104px;
-                            padding: 0 1rem;
-                        }
-                        @media only screen
-                        and (min-device-width: 737px)
-                        and (max-device-width: 812px)
-                        and (-webkit-min-device-pixel-ratio: 2)
-                        and (orientation: landscape) {
-                            width: auto;
-                            padding: 138px 250px 0 250px;
-                        }
+                        padding: 0px 2rem;
                     }
-                    .form-ciphers {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        z-index: 2000;
-                        margin-top: 0.45rem;
-                        .passcode-wrapper {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            width: auto;
-                            margin: 0 auto;
-                            margin-top: 1rem;
-                        input {
-                            width: 40px;
-                            height: 47px;
-                            padding: 0;
-                            margin-right: 10px;
-                            text-align: center;
-                            font-family: $body-font-semi;
-                            font-size: 16px;
-                            line-height: 23px;
-                            color: $black;
-                            border: 1px solid $white;
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                            &::-webkit-inner-spin-button, 
-                            &::-webkit-outer-spin-button { 
-                                -webkit-appearance: none;
-                                appearance: none;
-                                margin: 0;
-                            }
-                            &:focus,
-                            &.focus {
-                                border-color: $white;
-                                outline: none;
-                                box-shadow: none;
-                            }
-                            @media (max-width:768px){
-                                width: 50px;
-                                height: 60px;
-                            }
-
-                        }
+                    @media (min-width: 641px)
+                    and (max-width:678px) {
+                        padding: 0 9rem;
                     }
-                        .forgotten-code {
-                            margin: 0 auto;
-                            height: 52px;
-                            font-family: $body-font-family;
-                            font-style: normal;
-                            font-size: 10px;
-                            line-height: 15px;
-                            display: flex;
-                            align-items: center;
-                            text-align: center;
-                            color: $grey;
-                            opacity: 0.7;
-                            text-decoration: underline;
-
-                            @media (max-width: 768px) {
-                                height: 19px;
-                                font-size: 14px;
-                                line-height: 25px;
-                                font-family: $body-font-family;
-                                font-style: normal;
-                                padding-top: 60px;
-                                align-items: center;
-                                text-align: center;
-                            }
-
-                        }
-                
-                   }
                     
+                }
+                .backhome {
+                    font-family: $body-font-semi;
+                    font-weight: 600;
+                    font-size: 11px;
+                    line-height: 164%;
+                    a {
+                        color: $white;
+                        width: 208px;
+                        height: 18px;
+                        padding-top: 32px;
+
+                    }
+                }
             }
         }
 
         @media (max-width:768px){
-            background: url('/assets/images/visuel-vertcal-mobile.png') no-repeat;
+            background: url('./assets/images/visuel-vertcal-mobile.png') no-repeat;
             background-size: cover;
             width: 100%;
             height: 100vh;

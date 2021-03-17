@@ -26,14 +26,6 @@
 /* ----- COLOURS -----*/
 /*----- MEDIA QUERIES----*/
 /* BLURRED BG LOGIN PAGE */
-html {
-  scroll-behavior: smooth;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -43,7 +35,7 @@ body {
   overflow: hidden;
 }
 body .main-container {
-  background: url("/assets/images/visuel-vertical-1.png") no-repeat;
+  background: url("./assets/images/visuel-vertical-1.png");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -123,6 +115,11 @@ body .main-container .blurred-bg-login {
   box-sizing: border-box;
   background: inherit;
 }
+@media (min-width: 641px) and (max-width: 768px) and (orientation: portrait) {
+  body .main-container .blurred-bg-login {
+    width: 620px;
+  }
+}
 body .main-container .blurred-bg-login:before {
   position: fixed;
   width: 1002px;
@@ -133,10 +130,25 @@ body .main-container .blurred-bg-login:before {
   filter: blur(13px);
   background: inherit;
 }
-@media (max-width: 768px) {
+@media (max-width: 639px) {
   body .main-container .blurred-bg-login {
     margin: 0 auto;
     width: 320px;
+    height: 388px;
+    bottom: 44.07%;
+    top: 26.8%;
+    bottom: 0%;
+    background: linear-gradient(90.29deg, rgba(32, 32, 32, 0) -0.9%, rgba(0, 0, 0, 0) 103.24%);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur(19px);
+            backdrop-filter: blur(19px);
+  }
+}
+@media (min-width: 640px) and (max-width: 768px) {
+  body .main-container .blurred-bg-login {
+    margin: 0 auto;
+    width: 620px;
     height: 388px;
     bottom: 44.07%;
     top: 26.8%;
@@ -153,117 +165,75 @@ body .main-container .blurred-bg-login:before {
     width: 812px;
   }
 }
-body .main-container .blurred-bg-login .introduce-code {
+body .main-container .blurred-bg-login .error-msg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  color: #ffffff;
+  text-align: center;
 }
-body .main-container .blurred-bg-login .introduce-code .introduce-text {
+body .main-container .blurred-bg-login .error-msg .error-title,
+body .main-container .blurred-bg-login .error-msg .error-content,
+body .main-container .blurred-bg-login .error-msg .backhome {
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  justify-content: center;
+}
+body .main-container .blurred-bg-login .error-msg .error-title {
+  font-family: "ABChanelCorpo-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
   z-index: 20000;
-  margin: 0 auto;
   padding-top: 153px;
-  padding-left: 308px;
-  padding-right: 311px;
-  text-transform: uppercase;
+}
+@media (max-width: 747px) {
+  body .main-container .blurred-bg-login .error-msg .error-title {
+    font-size: 16px;
+  }
+}
+body .main-container .blurred-bg-login .error-msg .error-content {
   font-family: "ABChanel Corpo Light", sans-serif;
+  font-weight: 300;
   font-size: 12px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
 }
-@media (max-width: 768px) {
-  body .main-container .blurred-bg-login .introduce-code .introduce-text {
-    margin-top: 104px;
-    padding: 0 1rem;
+@media (min-width: 1024px) {
+  body .main-container .blurred-bg-login .error-msg .error-content {
+    padding: 0 18rem;
   }
 }
-@media only screen and (min-device-width: 737px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  body .main-container .blurred-bg-login .introduce-code .introduce-text {
-    width: auto;
-    padding: 138px 250px 0 250px;
+@media (min-width: 320px) and (max-width: 640px) {
+  body .main-container .blurred-bg-login .error-msg .error-content {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0px 2rem;
   }
 }
-body .main-container .blurred-bg-login .introduce-code .form-ciphers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 2000;
-  margin-top: 0.45rem;
+@media (min-width: 641px) and (max-width: 678px) {
+  body .main-container .blurred-bg-login .error-msg .error-content {
+    padding: 0 9rem;
+  }
 }
-body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input {
-  width: 40px;
-  height: 47px;
-  padding: 0;
-  margin-right: 10px;
-  text-align: center;
+body .main-container .blurred-bg-login .error-msg .backhome {
   font-family: "ABChanelCorpo-SemiBold", sans-serif;
-  font-size: 16px;
-  line-height: 23px;
-  color: #000000;
-  border: 1px solid #ffffff;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 164%;
 }
-body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input:last-child {
-  margin-right: 0;
-}
-body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input::-webkit-inner-spin-button, body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input:focus, body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input.focus {
-  border-color: #ffffff;
-  outline: none;
-  box-shadow: none;
-}
-@media (max-width: 768px) {
-  body .main-container .blurred-bg-login .introduce-code .form-ciphers .passcode-wrapper input {
-    width: 50px;
-    height: 60px;
-  }
-}
-body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-code {
-  margin: 0 auto;
-  height: 52px;
-  font-family: "Helvetica", sans-serif;
-  font-style: normal;
-  font-size: 10px;
-  line-height: 15px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ECECEC;
-  opacity: 0.7;
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  body .main-container .blurred-bg-login .introduce-code .form-ciphers .forgotten-code {
-    height: 19px;
-    font-size: 14px;
-    line-height: 25px;
-    font-family: "Helvetica", sans-serif;
-    font-style: normal;
-    padding-top: 60px;
-    align-items: center;
-    text-align: center;
-  }
+body .main-container .blurred-bg-login .error-msg .backhome a {
+  color: #ffffff;
+  width: 208px;
+  height: 18px;
+  padding-top: 32px;
 }
 @media (max-width: 768px) {
   body .main-container {
-    background: url("/assets/images/visuel-vertcal-mobile.png") no-repeat;
+    background: url("./assets/images/visuel-vertcal-mobile.png") no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
   }
-}/*# sourceMappingURL=login-page.css.map */
+}/*# sourceMappingURL=error.css.map */
